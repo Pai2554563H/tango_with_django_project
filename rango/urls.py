@@ -8,5 +8,6 @@ app_name='rango'
 urlpatterns = [
     path('', views.index, name='index'), # view from rango app, at first line for first display
     #path('', views.hello_world, name='hello'),
+    path('about/', views.about, name='about'),
 
 ]
