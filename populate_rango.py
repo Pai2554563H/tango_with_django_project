@@ -10,6 +10,7 @@ django.setup()
 
 # set-up must before import models
 from rango.models import Category, Page
+import random
 
 def populate():
     # First, we will create lists of dictionaries containing the pages
@@ -61,7 +62,7 @@ def populate():
 
         # python, django, other frameworks
         for p in cat_data['pages']:
-            add_page(c, p['title'], p['url'])
+            add_page(c, p['title'], p['url'], random.randint(1,100)) #get random views
 
  # Print out the categories we have added.
     for c in Category.objects.all():

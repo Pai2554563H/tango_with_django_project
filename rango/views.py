@@ -19,6 +19,8 @@ def index(request):
 # that will be passed to the template engine.
     category_list = Category.objects.order_by('-likes')[:5]
     # '-' order by descending
+# exercise
+    page_list = Page.objects.order_by('-views')[:5]
 
     context_dict={}
 
@@ -28,6 +30,7 @@ def index(request):
     # boldmessage in index.html file
 
     context_dict['categories'] = category_list
+    context_dict['pages'] = page_list
 
     # Return a rendered response to send to the client.
     # Note that the first parameter is the template we wish to use.
