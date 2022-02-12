@@ -8,6 +8,7 @@ class CategoryForm(forms.ModelForm):
     likes = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
     slug = forms.CharField(widget=forms.HiddenInput(), required=False)
     # element in model category
+    # because of widget=forms.HiddenInput() these are not display on pages
 
 # An inline class to provide additional information on the form.
     class Meta:
